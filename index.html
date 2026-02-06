@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CropQuick - Free One-Click Image Cropping for Social Media</title>
+  <meta name="description" content="Crop images instantly for Instagram (1080x1080), LinkedIn (1584x396), Twitter (1500x500), YouTube (1280x720), or any custom size. Free, private, no upload — runs entirely in your browser." />
+  <link rel="canonical" href="https://cropquick.space/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="keywords" content="image cropper, crop image online, resize image for instagram, linkedin banner size, twitter header size, youtube thumbnail maker, social media image resizer, free image crop tool" />
+  <meta name="author" content="CropQuick" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cropquick.space/" />
+  <meta property="og:title" content="CropQuick - Free One-Click Image Crop for Social Media" />
+  <meta property="og:description" content="Crop images instantly for Instagram, LinkedIn, Twitter, YouTube, or any custom size. Free, private, no upload needed." />
+  <meta property="og:image" content="https://cropquick.space/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="CropQuick - One-click image cropping tool for social media" />
+  <meta property="og:site_name" content="CropQuick" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CropQuick - Free One-Click Image Crop" />
+  <meta name="twitter:description" content="Crop images instantly for social media. Free, private, runs in your browser." />
+  <meta name="twitter:image" content="https://cropquick.space/og-image.png" />
+  <meta name="twitter:image:alt" content="CropQuick - One-click image cropping tool" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#1a73e8" />
+
+  <!-- Structured Data: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CropQuick",
+    "url": "https://cropquick.space",
+    "description": "Free one-click image cropping tool for social media. Crop images instantly for Instagram, LinkedIn, Twitter, YouTube, or any custom dimensions. Runs entirely in your browser — no uploads, no sign-up.",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "browserRequirements": "Requires a modern browser with Canvas support",
+    "featureList": "Instagram Post 1080x1080, LinkedIn Banner 1584x396, Twitter Header 1500x500, YouTube Thumbnail 1280x720, Custom crop with any dimensions",
+    "screenshot": "https://cropquick.space/og-image.png",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1",
+      "bestRating": "5"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Crop an Image for Social Media",
+    "description": "Crop any image to the perfect size for Instagram, LinkedIn, Twitter, or YouTube in 3 simple steps using CropQuick.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Upload your image",
+        "text": "Drag and drop your image onto CropQuick, or click to browse your files. Supports JPG, PNG, and WebP formats."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Choose a size",
+        "text": "Select a preset size for Instagram Post (1080x1080), LinkedIn Banner (1584x396), Twitter Header (1500x500), YouTube Thumbnail (1280x720), or choose Custom to enter any dimensions."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Download",
+        "text": "Your cropped image is ready instantly. Click Download to save it. No watermarks, no sign-up required."
+      }
+    ],
+    "totalTime": "PT10S",
+    "tool": {
+      "@type": "HowToTool",
+      "name": "CropQuick.space"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is CropQuick free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, CropQuick is completely free with no sign-up required. There are no watermarks, no limits, and no hidden fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my images uploaded to a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. CropQuick runs entirely in your browser. Your images never leave your device — all cropping is done locally using the HTML5 Canvas API."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What image sizes does CropQuick support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CropQuick includes presets for Instagram Post (1080x1080), LinkedIn Banner (1584x396), Twitter/X Header (1500x500), and YouTube Thumbnail (1280x720). You can also use the Custom option to crop to any dimensions you need."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What image formats are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CropQuick accepts JPG, PNG, and WebP images. All cropped images are exported as high-quality PNG files."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="module" src="/src/main.ts"></script>
+
+  <!-- Noscript fallback for SEO crawlers -->
+  <noscript>
+    <style>
+      #upload-section { display: block !important; }
+      .seo-content { display: block !important; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="CropQuick home">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 2v6H2v2h6V4h8v6h6V8h-4V2H6zm12 12v6H8v-6H2v2h4v6h12v-6h4v-2h-4z" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">CropQuick<span class="logo-dot">.space</span></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- State 1: Upload -->
+    <section id="upload-section" aria-label="Upload image">
+      <div class="section-inner">
+        <div class="hero-text">
+          <h1>Crop images for social media, instantly</h1>
+          <p class="subtitle">Drop an image, pick a platform, download. Done.</p>
+        </div>
+        <div id="dropzone" tabindex="0" role="button" aria-label="Drop image here or click to browse">
+          <div class="dropzone-content">
+            <svg class="dropzone-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="17 8 12 3 7 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="12" y1="3" x2="12" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="dropzone-title">Drop your image here</p>
+            <p class="dropzone-subtitle">or click to browse</p>
+            <p class="dropzone-hint">Supports JPG, PNG, WebP</p>
+          </div>
+          <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" hidden aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+    <!-- State 2: Crop -->
+    <section id="crop-section" hidden aria-label="Choose crop preset">
+      <div class="section-inner">
+        <div class="preview-wrapper">
+          <img id="preview-image" alt="Uploaded image preview" />
+        </div>
+        <h2 class="presets-heading">Choose a size</h2>
+        <div id="presets" class="preset-grid" role="group" aria-label="Crop presets">
+          <!-- Preset buttons injected by JS -->
+        </div>
+        <button id="change-image" class="text-btn" type="button">Change image</button>
+      </div>
+    </section>
+
+    <!-- State 2b: Custom Crop -->
+    <section id="custom-crop-section" hidden aria-label="Custom crop">
+      <div class="section-inner section-inner--wide">
+        <div class="custom-crop-workspace">
+          <div id="crop-overlay-container" class="crop-overlay-container">
+            <img id="crop-overlay-image" alt="Image to crop" />
+          </div>
+        </div>
+        <div class="custom-crop-controls">
+          <div class="dim-inputs">
+            <label class="dim-label">
+              <span>W</span>
+              <input type="number" id="custom-width" class="dim-input" min="1" max="10000" placeholder="Width" />
+              <span class="dim-unit">px</span>
+            </label>
+            <button id="aspect-lock" class="aspect-lock-btn" type="button" aria-label="Lock aspect ratio" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path class="lock-closed" d="M17 11V8A5 5 0 007 8v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </button>
+            <label class="dim-label">
+              <span>H</span>
+              <input type="number" id="custom-height" class="dim-input" min="1" max="10000" placeholder="Height" />
+              <span class="dim-unit">px</span>
+            </label>
+          </div>
+          <div class="custom-crop-actions">
+            <button id="apply-custom-crop" class="primary-btn" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Apply Crop
+            </button>
+            <button id="cancel-custom-crop" class="text-btn" type="button">Back to presets</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- State 3: Download -->
+    <section id="download-section" hidden aria-label="Download cropped image">
+      <div class="section-inner">
+        <div class="result-wrapper">
+          <img id="result-image" alt="Cropped image result" />
+          <p id="result-dims" class="result-dims"></p>
+        </div>
+        <div class="download-actions">
+          <a id="download-link" class="primary-btn" download>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="7 10 12 15 17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download
+          </a>
+          <button id="crop-another" class="secondary-btn" type="button">Crop another size</button>
+          <button id="start-over" class="text-btn" type="button">Start over</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SEO Content: visible to crawlers, provides keyword-rich indexable text -->
+  <article class="seo-content" aria-label="About CropQuick">
+    <div class="seo-inner">
+
+      <section class="seo-section">
+        <h2>The fastest way to crop images for social media</h2>
+        <p>CropQuick is a free online image cropping tool built for speed. No sign-up, no uploads to a server, no watermarks. Just drop your image, pick a platform, and download the perfectly sized result in seconds.</p>
+      </section>
+
+      <section class="seo-section">
+        <h2>Supported social media sizes</h2>
+        <div class="seo-sizes">
+          <div class="seo-size">
+            <h3>Instagram Post</h3>
+            <p>1080 &times; 1080 pixels (1:1 square). The standard size for Instagram feed posts that displays perfectly on all devices.</p>
+          </div>
+          <div class="seo-size">
+            <h3>LinkedIn Banner</h3>
+            <p>1584 &times; 396 pixels (4:1). The recommended dimensions for your LinkedIn profile background or company page cover image.</p>
+          </div>
+          <div class="seo-size">
+            <h3>Twitter / X Header</h3>
+            <p>1500 &times; 500 pixels (3:1). The ideal header photo size for your Twitter or X profile that won't get cropped awkwardly.</p>
+          </div>
+          <div class="seo-size">
+            <h3>YouTube Thumbnail</h3>
+            <p>1280 &times; 720 pixels (16:9). The recommended resolution for YouTube video thumbnails that look sharp at every screen size.</p>
+          </div>
+          <div class="seo-size">
+            <h3>Custom Size</h3>
+            <p>Crop to any pixel dimensions you need. Set exact width and height, use the interactive crop rectangle, and lock the aspect ratio for precision.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="seo-section">
+        <h2>How it works</h2>
+        <ol class="seo-steps">
+          <li><strong>Drop your image</strong> &mdash; Drag an image onto the page or click to browse. Supports JPG, PNG, and WebP.</li>
+          <li><strong>Pick a size</strong> &mdash; Choose a social media preset or enter custom dimensions. Your image is automatically center-cropped to fill the target size.</li>
+          <li><strong>Download</strong> &mdash; Your cropped image is ready instantly. Click download and you're done. No watermarks.</li>
+        </ol>
+      </section>
+
+      <section class="seo-section">
+        <h2>Why CropQuick?</h2>
+        <ul class="seo-features">
+          <li><strong>100% private</strong> &mdash; Your images never leave your browser. All processing happens locally using the Canvas API.</li>
+          <li><strong>No sign-up required</strong> &mdash; Start cropping immediately. No account, no email, no registration.</li>
+          <li><strong>Completely free</strong> &mdash; No hidden fees, no premium tiers, no limits on how many images you crop.</li>
+          <li><strong>Lightning fast</strong> &mdash; Images are processed instantly in your browser. No waiting for server uploads or downloads.</li>
+          <li><strong>Works on any device</strong> &mdash; Desktop, tablet, or phone. CropQuick works in any modern browser.</li>
+        </ul>
+      </section>
+
+      <section class="seo-section">
+        <h2>Frequently asked questions</h2>
+        <dl class="seo-faq">
+          <div class="faq-item">
+            <dt>Is CropQuick free to use?</dt>
+            <dd>Yes, CropQuick is completely free with no sign-up required. There are no watermarks, no limits, and no hidden fees.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>Are my images uploaded to a server?</dt>
+            <dd>No. CropQuick runs entirely in your browser. Your images never leave your device &mdash; all cropping is done locally.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>What image sizes does CropQuick support?</dt>
+            <dd>CropQuick includes presets for Instagram Post (1080&times;1080), LinkedIn Banner (1584&times;396), Twitter/X Header (1500&times;500), and YouTube Thumbnail (1280&times;720). You can also crop to any custom dimensions.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>What image formats are supported?</dt>
+            <dd>CropQuick accepts JPG, PNG, and WebP images. All cropped images are exported as high-quality PNG files.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>Can I crop to a custom size?</dt>
+            <dd>Yes. Click the "Custom" option to enter exact pixel dimensions, use the interactive crop rectangle to select the region, and optionally lock the aspect ratio.</dd>
+          </div>
+        </dl>
+      </section>
+
+    </div>
+  </article>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="privacy-note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        100% private. Your images never leave your browser.
+      </p>
+      <p class="footer-copy">&copy; 2025 CropQuick.space &mdash; Free online image cropper for social media</p>
+    </div>
+  </footer>
+</body>
+</html>

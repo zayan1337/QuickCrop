@@ -1,0 +1,16 @@
+{
+  "name": "CropQuick",
+  "short_name": "CropQuick",
+  "description": "One-click image cropping for social media",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0f4f9",
+  "theme_color": "#1a73e8",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
