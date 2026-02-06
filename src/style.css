@@ -1,20 +1,21 @@
 /* ========================================
    CropQuick.space — Design System
-   Gemini-inspired: clean, centered, airy
+   Gemini-inspired dark theme
    ======================================== */
 
 :root {
-  /* Colors */
-  --color-bg: #f0f4f9;
-  --color-surface: #ffffff;
-  --color-text: #1f1f1f;
-  --color-text-secondary: #5f6368;
-  --color-text-tertiary: #9aa0a6;
-  --color-accent: #1a73e8;
-  --color-accent-hover: #1557b0;
-  --color-accent-light: #e8f0fe;
-  --color-border: #dadce0;
-  --color-drop-highlight: #d2e3fc;
+  /* Dark theme (Gemini-style) */
+  --color-bg: #1a1a1e;
+  --color-surface: #252529;
+  --color-surface-elevated: #2d2d32;
+  --color-text: #e8eaed;
+  --color-text-secondary: #9aa0a6;
+  --color-text-tertiary: #5f6368;
+  --color-accent: #8ab4f8;
+  --color-accent-hover: #aecbfa;
+  --color-accent-light: rgba(138, 180, 248, 0.12);
+  --color-border: #3c4043;
+  --color-drop-highlight: rgba(138, 180, 248, 0.2);
 
   /* Spacing */
   --space-xs: 4px;
@@ -25,7 +26,7 @@
   --space-2xl: 64px;
 
   /* Typography */
-  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-family: 'Google Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-size-sm: 0.8125rem;
   --font-size-base: 0.9375rem;
   --font-size-lg: 1.125rem;
@@ -40,10 +41,10 @@
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+  /* Shadows — subtle in dark mode */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
 
   /* Transitions */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -388,8 +389,8 @@ section.active .section-inner {
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-md) var(--space-xl);
-  background: var(--color-accent);
-  color: white;
+  background: #6b9ef6;
+  color: #1a1a1e;
   font-size: var(--font-size-base);
   font-weight: 500;
   border-radius: var(--radius-full);
@@ -403,7 +404,8 @@ section.active .section-inner {
 }
 
 .primary-btn:hover {
-  background: var(--color-accent-hover);
+  background: var(--color-accent);
+  color: #1a1a1e;
   box-shadow: var(--shadow-md);
   transform: translateY(-1px);
 }
@@ -694,8 +696,8 @@ section.active .section-inner {
   width: 28px;
   height: 28px;
   border-radius: var(--radius-full);
-  background: var(--color-accent);
-  color: white;
+  background: #6b9ef6;
+  color: #1a1a1e;
   font-size: var(--font-size-sm);
   font-weight: 600;
   display: flex;
