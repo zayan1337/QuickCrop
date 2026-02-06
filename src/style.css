@@ -503,6 +503,12 @@ section.active .section-inner {
   text-align: center;
 }
 
+.custom-crop-preset-hint {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
 .dim-inputs {
   display: inline-flex;
   align-items: center;

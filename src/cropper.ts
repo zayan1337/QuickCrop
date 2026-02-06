@@ -1,5 +1,24 @@
 import type { Preset, CropRect, CropResult } from './types';
 
+/** Returns the center "cover" crop rect in natural image coords for a given aspect ratio. */
+export function getCoverCropRect(image: HTMLImageElement, targetAspect: number): CropRect {
+  const srcAspect = image.naturalWidth / image.naturalHeight;
+  let sx: number, sy: number, sw: number, sh: number;
+
+  if (srcAspect > targetAspect) {
+    sh = image.naturalHeight;
+    sw = sh * targetAspect;
+    sx = (image.naturalWidth - sw) / 2;
+    sy = 0;
+  } else {
+    sw = image.naturalWidth;
+    sh = sw / targetAspect;
+    sx = 0;
+    sy = (image.naturalHeight - sh) / 2;
+  }
+  return { x: sx, y: sy, width: sw, height: sh };
+}
+
 export function cropImage(image: HTMLImageElement, preset: Preset): Promise<CropResult> {
   return new Promise((resolve, reject) => {
     const canvas = document.createElement('canvas');
@@ -49,7 +68,8 @@ export function cropImageCustom(
   image: HTMLImageElement,
   sourceRect: CropRect,
   outputWidth: number,
-  outputHeight: number
+  outputHeight: number,
+  preset?: Preset
 ): Promise<CropResult> {
   return new Promise((resolve, reject) => {
     const canvas = document.createElement('canvas');
@@ -73,7 +93,9 @@ export function cropImageCustom(
         return;
       }
       const objectUrl = URL.createObjectURL(blob);
-      const filename = `quickcrop-custom-${outputWidth}x${outputHeight}.png`;
+      const filename = preset
+        ? `quickcrop-${preset.id}-${preset.width}x${preset.height}.png`
+        : `quickcrop-custom-${outputWidth}x${outputHeight}.png`;
       resolve({ blob, objectUrl, width: outputWidth, height: outputHeight, filename });
     }, 'image/png');
   });

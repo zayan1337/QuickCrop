@@ -20,6 +20,10 @@ interface CropOverlayOptions {
   container: HTMLElement;
   image: HTMLImageElement;
   onChange: (rect: CropRect) => void;
+  /** If set, use this rect instead of default 80% centered (e.g. for preset reposition). */
+  initialRect?: CropRect;
+  /** If set with initialRect, lock aspect ratio (e.g. for preset mode). */
+  initialAspectRatio?: number;
 }
 
 const HANDLE_SIZE = 8;
@@ -27,7 +31,7 @@ const HANDLE_HIT = 14; // larger hit area for touch
 const MIN_SIZE = 20;
 
 export function createCropOverlay(options: CropOverlayOptions): CropOverlay {
-  const { container, image, onChange } = options;
+  const { container, image, onChange, initialRect, initialAspectRatio } = options;
 
   const canvas = document.createElement('canvas');
   canvas.style.position = 'absolute';
@@ -360,7 +364,16 @@ export function createCropOverlay(options: CropOverlayOptions): CropOverlay {
   // Initialize once image is loaded
   function init(): void {
     updateScale();
-    initRect();
+    if (initialAspectRatio != null) {
+      aspectRatio = initialAspectRatio;
+    }
+    if (initialRect) {
+      rect = { ...initialRect };
+      if (aspectRatio) constrainToAspect();
+      clampRect();
+    } else {
+      initRect();
+    }
     render();
     onChange(rect);
   }
