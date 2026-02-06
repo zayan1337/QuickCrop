@@ -1,6 +1,6 @@
 {
-  "name": "CropQuick",
-  "short_name": "CropQuick",
+  "name": "QuickCrop",
+  "short_name": "QuickCrop",
   "description": "One-click image cropping for social media",
   "start_url": "/",
   "display": "standalone",

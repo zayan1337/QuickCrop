@@ -39,7 +39,7 @@ export function cropImage(image: HTMLImageElement, preset: Preset): Promise<Crop
         return;
       }
       const objectUrl = URL.createObjectURL(blob);
-      const filename = `cropquick-${preset.id}-${preset.width}x${preset.height}.png`;
+      const filename = `quickcrop-${preset.id}-${preset.width}x${preset.height}.png`;
       resolve({ blob, objectUrl, width: preset.width, height: preset.height, filename });
     }, 'image/png');
   });
@@ -73,7 +73,7 @@ export function cropImageCustom(
         return;
       }
       const objectUrl = URL.createObjectURL(blob);
-      const filename = `cropquick-custom-${outputWidth}x${outputHeight}.png`;
+      const filename = `quickcrop-custom-${outputWidth}x${outputHeight}.png`;
       resolve({ blob, objectUrl, width: outputWidth, height: outputHeight, filename });
     }, 'image/png');
   });
