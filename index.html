@@ -214,13 +214,23 @@
     <!-- State 2b: Custom Crop -->
     <section id="custom-crop-section" hidden aria-label="Custom crop">
       <div class="section-inner section-inner--wide">
+        <div class="stretch-option-wrap">
+          <label class="stretch-option" for="stretch-to-output">
+            <input type="checkbox" id="stretch-to-output" class="stretch-toggle-input" />
+            <span class="stretch-toggle-track" aria-hidden="true">
+              <span class="stretch-toggle-thumb"></span>
+            </span>
+            <span class="stretch-option-label">Distort to fit (e.g. portrait → square)</span>
+          </label>
+          <p class="stretch-option-hint">When on: you can resize the crop frame to any shape; the selection will be stretched or squashed to the output size (e.g. turn a portrait into a square).</p>
+        </div>
         <div class="custom-crop-workspace">
           <div id="crop-overlay-container" class="crop-overlay-container">
             <img id="crop-overlay-image" alt="Image to crop" />
           </div>
         </div>
         <div class="custom-crop-controls">
-          <p id="custom-crop-preset-hint" class="custom-crop-preset-hint" hidden aria-live="polite">Drag to position · <span id="custom-crop-preset-dims"></span></p>
+          <p id="custom-crop-preset-hint" class="custom-crop-preset-hint" hidden aria-live="polite">Drag to move · Drag corners to zoom · <span id="custom-crop-preset-dims"></span></p>
           <div id="custom-crop-dims-row" class="dim-inputs">
             <label class="dim-label">
               <span>W</span>

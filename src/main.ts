@@ -23,6 +23,7 @@ const aspectLockBtn = document.getElementById('aspect-lock')!;
 const presetHintEl = document.getElementById('custom-crop-preset-hint')!;
 const presetDimsEl = document.getElementById('custom-crop-preset-dims')!;
 const dimsRowEl = document.getElementById('custom-crop-dims-row')!;
+const stretchCheckbox = document.getElementById('stretch-to-output') as HTMLInputElement;
 
 // --- Handlers ---
 
@@ -65,12 +66,13 @@ function handlePreset(preset: Preset): void {
     const overlayImage = document.getElementById('crop-overlay-image') as HTMLImageElement;
     const aspect = preset.width / preset.height;
     const initialRect = getCoverCropRect(currentImage!, aspect);
+    const allowStretch = stretchCheckbox.checked;
 
     cropOverlay = createCropOverlay({
       container,
       image: overlayImage,
       initialRect,
-      initialAspectRatio: aspect,
+      initialAspectRatio: allowStretch ? undefined : aspect,
       onChange() {
         // In preset mode we don't sync dim inputs
       },
@@ -214,6 +216,21 @@ document.getElementById('cancel-custom-crop')!.addEventListener('click', () => {
 });
 
 aspectLockBtn.addEventListener('click', toggleAspectLock);
+
+stretchCheckbox.addEventListener('change', () => {
+  if (!cropOverlay) return;
+  if (stretchCheckbox.checked) {
+    cropOverlay.setAspectRatio(null);
+  } else {
+    if (currentPreset) {
+      cropOverlay.setAspectRatio(currentPreset.width / currentPreset.height);
+    } else if (aspectLocked) {
+      const w = parseInt(widthInput.value, 10);
+      const h = parseInt(heightInput.value, 10);
+      if (w > 0 && h > 0) cropOverlay.setAspectRatio(w / h);
+    }
+  }
+});
 
 widthInput.addEventListener('input', handleDimInputChange);
 heightInput.addEventListener('input', handleDimInputChange);
