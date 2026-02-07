@@ -868,6 +868,21 @@ footer {
   flex-shrink: 0;
 }
 
+.footer-tools {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-tools a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.footer-tools a:hover {
+  text-decoration: underline;
+}
+
 .footer-copy {
   font-size: var(--font-size-sm);
   color: var(--color-text-tertiary);
